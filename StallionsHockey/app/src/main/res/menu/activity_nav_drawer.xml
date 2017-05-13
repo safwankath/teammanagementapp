@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_players_layout"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="PLAYERS" />
+        <item
+            android:id="@+id/nav_fees"
+            android:icon="@drawable/ic_local_atm_black_24dp"
+            android:title="FEES" />
+
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_account"
+                android:title="Edit Profile" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_exit"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
