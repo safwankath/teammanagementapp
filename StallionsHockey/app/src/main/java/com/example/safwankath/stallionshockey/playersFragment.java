@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,7 @@ import android.widget.ListView;
 public class playersFragment extends Fragment {
     View playersView;
     FloatingActionButton fab;
-    String[] mobileArray = {"Bob Jones","Kevin Parker", "Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X", "Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X"};
+   String[] mobileArray = {""};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,11 +36,23 @@ public class playersFragment extends Fragment {
                 startActivity(addPlayerIntent);
             }
         });
-        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(),
-                R.layout.activity_listview, mobileArray);
 
-        ListView listView = (ListView) playersView.findViewById(R.id.mobile_list);
-        listView.setAdapter(adapter);
+        String type = "getPlayers";
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(new BackgroundWorker.AsyncResponse() {
+            @Override
+            public void processFinish(String output) {
+                mobileArray=output.split(",");
+                Log.i("hereasdfsdf:", mobileArray[0]);
+                ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(),
+                        R.layout.activity_listview, mobileArray);
+
+                ListView listView = (ListView) playersView.findViewById(R.id.mobile_list);
+                listView.setAdapter(adapter);
+            }
+        },getActivity());
+        backgroundWorker.execute(type);
+
         return playersView;
     }
 

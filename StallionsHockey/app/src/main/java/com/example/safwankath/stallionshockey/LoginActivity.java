@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by Safwan Kath on 2017-05-12.
@@ -13,11 +14,13 @@ import android.widget.EditText;
 public class LoginActivity extends AppCompatActivity {
     public Toolbar toolbar;
     EditText usernameEt, passwordEt;
+    public static String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
 
         usernameEt = (EditText)findViewById(R.id.login_username);
@@ -27,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // function called from btnlogin in login_layout
     public void onLogin(View view){
-        String username = usernameEt.getText().toString();
+        username = usernameEt.getText().toString();
         String password = passwordEt.getText().toString();
 
         String type = "login";
@@ -42,6 +45,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         },this);
         backgroundWorker.execute(type, username, password);
+
+
+
     }
 
 }

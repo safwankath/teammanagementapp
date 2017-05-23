@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/libs/CodePerspective101-master/CodePerspective101-master.iml" filepath="$PROJECT_DIR$/libs/CodePerspective101-master/CodePerspective101-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/StallionsHockey.iml" filepath="$PROJECT_DIR$/StallionsHockey.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Registration Form -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- First Name Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:id="@+id/textView8" />
+
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="First Name"
+            android:layout_marginTop="5dp"/>
+        <EditText android:id="@+id/prof_firstname"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!-- Last Name Label -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Last Name"/>
+        <EditText android:id="@+id/prof_lastname"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!--  Username Label -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Username"/>
+        <EditText android:id="@+id/prof_username"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!-- Password Label -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Password"/>
+        <EditText android:id="@+id/prof_password"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:password="true"
+            android:singleLine="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!--  Email Label -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Email"/>
+        <EditText android:id="@+id/prof_email"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!-- Jersey Number Label -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Jersey Number"/>
+        <EditText android:id="@+id/prof_jerseynum"
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:textSize="20dp"
+            android:layout_marginTop="5dip"
+            android:singleLine="true"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/textview_border"/>
+        <!-- Register Button -->
+        <Button android:id="@+id/btnUpdateProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Update Profile"/>
+        <!-- Link to Login Screen -->
+
+
+    </LinearLayout>
+
+</RelativeLayout>

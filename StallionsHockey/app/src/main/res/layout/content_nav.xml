@@ -11,8 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.safwankath.stallionshockey.NavActivity"
-    tools:showIn="@layout/app_bar_nav">
+    tools:context="com.example.safwankath.stallionshockey.NavActivity">
     <ImageView android:id="@+id/image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,8 +23,7 @@
         android:adjustViewBounds="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/stallionsj"
-        />
+        android:src="@drawable/stallionsj" />
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
@@ -37,7 +35,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Welcome Bob,"
             android:textStyle="bold"
-            android:id="@+id/textView7"
+            android:id="@+id/welcome_username"
             android:layout_above="@+id/image_view"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"

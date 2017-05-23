@@ -9,18 +9,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class NavActivity extends  AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public FragmentManager fragmentManager;
     public Toolbar toolbar;
-    public static Player players[] = new Player [200];
-    EditText usernameEt, passwordEt;
-    AlertDialog alertDialog;
+    String[] playerInfo={""};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,8 @@ public class NavActivity extends  AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        TextView content_username= (TextView)findViewById(R.id.welcome_username);
+        content_username.setText("Welcome "+LoginActivity.username+",");
 
 
     }
@@ -89,7 +91,7 @@ public class NavActivity extends  AppCompatActivity
         } else if (id == R.id.nav_fees) {
 
         } else if (id == R.id.nav_profile) {
-
+            fragmentManager.beginTransaction().replace(R.id.nav_frame, new profileFragment()).commit();
         } else if (id == R.id.nav_logout) {
 
         }
